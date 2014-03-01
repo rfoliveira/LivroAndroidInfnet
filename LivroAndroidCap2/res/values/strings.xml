@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LivroAndroidCap2</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="layout_texto_exemplo2">Este é o segundo exemplo no Android</string>
+    <string name="layout_texto_exemplo3">Exemplo de imagens utilizando a classe ImageView</string>
+    <string name="cabecalho_exemplo4">Digite seu nome</string>
+
+</resources>
