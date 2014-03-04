@@ -28,6 +28,7 @@
         <activity android:name="ExemploListActivity1" />
         <activity android:name="ExemploSimpleAdapter1" />
         <activity android:name="ExemploSimpleAdapter2" />
+        <activity android:name="ExemploSmileAdapter" />
                
     </application>
 

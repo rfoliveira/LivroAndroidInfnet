@@ -5,7 +5,6 @@ import java.util.HashMap;
 
 import android.app.ListActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -13,13 +12,12 @@ import android.widget.Toast;
 
 public class ExemploSimpleAdapter2 extends ListActivity {
 	
-	private static final String TAG = "ExemploSimpleAdapter2";
-
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+	protected void onCreate(Bundle icicle) {
 		// TODO Auto-generated method stub
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.layout_contatos_fone);
+		super.onCreate(icicle);
+		// Senão fizer isso essa M não funciona, dá erro de "(...)falta um conteúdo com id='@android:id/list' (...)"
+		setContentView(R.layout.layout_listview_contatos);
 		
 		ArrayList<HashMap<String, String>> list = new ArrayList<HashMap<String, String>>();
 		
@@ -36,7 +34,6 @@ public class ExemploSimpleAdapter2 extends ListActivity {
 		int[] to = new int[] { R.id.nome, R.id.fone };
 		
 		setListAdapter(new SimpleAdapter(this, list, R.layout.layout_contatos_fone, from, to));
-		Log.i(TAG, "ExemploSimpleAdapter2.onCrate()");
 	}
 	
 	@Override
@@ -49,6 +46,5 @@ public class ExemploSimpleAdapter2 extends ListActivity {
 		
 		// Exibe um alerta
 		Toast.makeText(this, "Você selecionou: " + item, Toast.LENGTH_SHORT).show();
-		Log.i(TAG, "ExemploSimpleAdapter2.onListItemClick()");
 	}
 }
